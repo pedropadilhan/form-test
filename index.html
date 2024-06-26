@@ -65,7 +65,7 @@
             <input type="tel" id="phone" name="phone" maxlength="15" onkeyup="handlePhone(event)" required>
 
             <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4"  required></textarea>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
 
             <input type="submit" value="Enviar">
         </form>
@@ -86,6 +86,20 @@
             value = value.replace(/(\d)(\d{4})$/, "$1-$2")
             return value
         }
+
+        /* Confirmaçaõ de envio formulario */
+       // Selecionando o formulário
+var form = document.querySelector('form[name="formulario-site"]');
+
+// Adicionando o ouvinte de evento para a submissão do formulário
+form.addEventListener('submit', function(event) {
+  // Não prevenindo o comportamento padrão
+  // O formulário será enviado normalmente
+
+  // Exibindo o alerta
+  console.log("oi")
+  alert('O formulário foi enviado com sucesso.');
+});
     </script>
 </body>
 
